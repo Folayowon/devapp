@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import Countdown from "react-countdown";
-import ReactDOM from 'react-dom/client';
-// import './index.css';
 
 //INTERNAL IMPORT
 import { VotingContext } from "../context/Voter";
@@ -46,7 +44,7 @@ const index = () => {
           </div>
           <div className={Style.winner_message}>
             <small>
-              <Countdown date={Date.now() + 1000000000} />
+              <Countdown date={Date.now() + 10000} />
             </small>
           </div>
         </div>

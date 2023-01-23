@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Create = await hre.ethers.getContractFactory("Create");
-  const create = await Create.deploy();
+  const Devapp = await hre.ethers.getContractFactory("Devapp");
+  const devapp = await Devapp.deploy();
 
-  await create.deployed();
+  await devapp.deployed();
 
-  console.log("Lock with 1 ETH deployed to:", create.address);
+  console.log("Lock with 1 ETH deployed to:", devapp.address);
 }
 
 main().catch((error) => {

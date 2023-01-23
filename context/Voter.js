@@ -86,6 +86,7 @@ export const VotingProvider = ({ children }) => {
       const added = await client.add({ content: file });
 
       const url = `${subdomain}/ipfs/${added.path}`;
+      //const url = `https://ipfs.infura.io/ipfs/${added.path}`;
 
       // setImage(url);
       return url;
@@ -99,7 +100,8 @@ export const VotingProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      //const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `${subdomain}/ipfs/${added.path}`;
       console.log(url);
       return url;
     } catch (error) {
@@ -123,7 +125,7 @@ export const VotingProvider = ({ children }) => {
     const data = JSON.stringify({ name, address, position, image: fileUrl });
     const added = await client.add(data);
 
-    const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+    const url = `${subdomain}/ipfs/${added.path}`; // `https://ipfs.infura.io/ipfs/${added.path}`;
 
     const voter = await contract.voterRight(address, name, url, fileUrl);
     voter.wait();
@@ -198,8 +200,8 @@ export const VotingProvider = ({ children }) => {
       age,
     });
     const added = await client.add(data);
-
-    const ipfs = `https://ipfs.infura.io/ipfs/${added.path}`;
+    console.log ("added ...", added)
+    const ipfs = `${subdomain}/ipfs/${added.path}`; //`https://ipfs.infura.io/ipfs/${added.path}`;
 
     const candidate = await contract.setCandidate(
       address,
