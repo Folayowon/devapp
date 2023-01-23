@@ -1,11 +1,11 @@
 ////////////////////////////////////////
 
-**# Project Title:**
+# Project Title:
 
 Decentralized Voting Application (Devapp)
 
-**# Project Description:
-**
+# Project Description:
+
 The Decentralized Voting Application (Devapp) is a platform that allows individuals to cast their votes in a secure and transparent manner. The platform makes use of blockchain technology, ensuring that each vote is recorded immutably and verifiably, making the voting process tamper-proof. The use of blockchain technology enables the votes to be recorded on a distributed ledger, making the results of the election or decision-making process accurate and reliable.
 
 The application will allow users to create and vote in polls, with the option to make them public or private. Users can also view the results of polls in real-time, ensuring transparency and accuracy. Additionally, the application will use smart contracts to ensure that only eligible voters are able to cast their ballots and that each voter can only vote once.
@@ -14,7 +14,7 @@ The decentralized nature of the application means that it will not be controlled
 
 Overall, this decentralized voting application aims to provide a reliable and trustworthy way for individuals to participate in democratic processes, and to promote transparency, security, and accessibility.
 
-**# Logo Description:**
+# Logo Description:
 
 The logo for the Decentralized Voting Application (Devapp) combines the symbol of electrical power, representing authority, with a hexagonal object symbolizing the hexadecimal addresses used in blockchain technology and cryptocurrency. This imagery encapsulates the decentralization aspect of distributed ledger technology, which is a unique feature of this platform.
 
