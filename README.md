@@ -96,13 +96,13 @@ To initialize hardhat run this command line:
 
 NB: This will generate 20 demo accounts that can be used for testing. Copy the accounts(both the private and the public keys) you can easily access it. And it is successful, there would be a prompt like this in the terminal:
 
-    Account #0: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000 ETH)_
+    Account #0: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000 ETH)
 
-    Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80_
+    Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 
-    Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)_
+    Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)
 
-    Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d_
+    Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
 
 *STEP 5: Split your terminal and run this command line in your terminal:*
 
@@ -111,9 +111,9 @@ NB: This will generate 20 demo accounts that can be used for testing. Copy the a
   NB: This is the deploy command of devapp smart contract.
   If well-deployed there will be a prompt like this in the terminal:
 
-    Compiled 3 Solidity files_
-    successfully_
-    Lock with 1 ETH deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3_
+    Compiled 3 Solidity files
+    successfully
+    Lock with 1 ETH deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 # Usage:
 
