@@ -1,4 +1,4 @@
-Copyright (c) 2023 Oladapo Folayowon and Grandida LLC
+**Copyright (c) 2023 Oladapo Folayowon and Grandida LLC**
 
 The use, copy, modification, merger, publication, distribution, sublicensing, and/or selling of this software
 
