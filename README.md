@@ -77,6 +77,7 @@ Once this is done:
 ` npm install @openzeppelin/contracts `
 
 `npm install axios
+
 npm install dotenv
 npm install ethers
 npm install ipfs-http-client
