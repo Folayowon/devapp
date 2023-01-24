@@ -99,8 +99,9 @@ Once this is done:
 `npm install web3modal`
 
 * NB: these dependencies are necessary to initialize the environment.
+* NB: these dependencies are necessary to initialize the environment.
 
-*STEP 2: Initializing dependencies for hardhat :*
+* STEP 2: Initializing dependencies for hardhat :
 
 To initialize hardhat run this command line:
 
@@ -110,12 +111,12 @@ _or_
 
 `npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"`
 
-*STEP 3: Run this command line in your terminal:*
+* STEP 3: Run this command line in your terminal:
 
 `npm run dev`
 `npm run dev`
 
-*STEP 4: Split your terminal and run this command line (this will run the hardhat node in the local terminal ):*
+* STEP 4: Split your terminal and run this command line (this will run the hardhat node in the local terminal ):
 
 `npx hardhat node`
 `npx hardhat node`
@@ -123,12 +124,14 @@ _or_
 NB: This will generate 20 demo accounts that can be used for testing. Copy the accounts(both the private and the public keys) you can easily access it. And it is successful, there would be a prompt like this in the terminal:
 
 _Account #0: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000 ETH)_
+
 _Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80_
 
 _Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)_
+
 _Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d _
 
-*STEP 5: Split your terminal and run this command line in your terminal:*
+* STEP 5: Split your terminal and run this command line in your terminal:
 
 `npx hardhat run scripts/deploy.js --network localhost`
 
