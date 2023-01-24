@@ -81,8 +81,10 @@ Once this is done:
 *STEP 2: Initializing dependencies for hardhat :*
 
 To initialize hardhat run this command line:
-*npm install @nomicfoundation/hardhat-toolbox
-or*
+
+`npm install @nomicfoundation/hardhat-toolbox`
+
+*_or_*
 
 `npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"`
 
@@ -119,7 +121,3 @@ NB: This will generate 20 demo accounts that can be used for testing. Copy the a
 
 # License
 This project is subject to the terms and conditions of the Grandida License. Please refer to the LICENSE.md file for more information.
-
-#� �d�e�v�a�p�p�-�m�a�i�n�
-�
-�
