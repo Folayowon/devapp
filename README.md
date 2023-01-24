@@ -90,7 +90,7 @@ _or_
 
 `npm run dev`
 
-* STEP 4: Split your terminal and run this command line (this will run the hardhat node in the local terminal ):
+* STEP 4: Split your terminal and run this command line (this will run the hardhat node in the local terminal ):*
 
 `npx hardhat node`
 
