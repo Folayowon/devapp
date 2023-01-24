@@ -101,7 +101,7 @@ Once this is done:
 * NB: these dependencies are necessary to initialize the environment.
 * NB: these dependencies are necessary to initialize the environment.
 
-* STEP 2: Initializing dependencies for hardhat :
+*STEP 2: Initializing dependencies for hardhat :*
 
 To initialize hardhat run this command line:
 
@@ -111,7 +111,7 @@ _or_
 
 `npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"`
 
-* STEP 3: Run this command line in your terminal:
+*STEP 3: Run this command line in your terminal:*
 
 `npm run dev`
 `npm run dev`
@@ -131,7 +131,7 @@ _Account #1: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (10000 ETH)_
 
 _Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d _
 
-* STEP 5: Split your terminal and run this command line in your terminal:
+*STEP 5: Split your terminal and run this command line in your terminal:*
 
 `npx hardhat run scripts/deploy.js --network localhost`
 
