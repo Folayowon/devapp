@@ -50,7 +50,7 @@ Once this is done:
 
 # STEP 1: install the required dependencies:
 
-** npm install @openzeppelin/contracts
+npm install @openzeppelin/contracts
 
 npm install axios
 npm install dotenv
@@ -69,8 +69,10 @@ npm install web3modal
 # STEP 2: Initializing dependencies for hardhat :
 
 To initialize hardhat run this command line:
-*npm install @nomicfoundation/hardhat-toolbox
-or*
+
+npm install @nomicfoundation/hardhat-toolbox
+
+_or_
 
 npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"
 
