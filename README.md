@@ -68,8 +68,8 @@ npm install web3modal
 # STEP 2: Initializing dependencies for hardhat :
 
 To initialize hardhat run this command line:
-npm install @nomicfoundation/hardhat-toolbox
-or
+*npm install @nomicfoundation/hardhat-toolbox
+or*
 
 npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"
 
