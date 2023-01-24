@@ -1,24 +1,4 @@
-.input__box {
-  /* width: 100%;
-  background-color: #730283;
-  padding: .5rem;
-  border-radius: .2rem; */
-}
 
-.input__box input {
-  /* background-color: transparent;
-  border: 0;
-  width: 100%;
-  outline: none;
-  padding-inline: 0.5rem;
-  color: #fff; */
-}
-
-.input__box input::placeholder {
-  /* color: #2d0036;
-  font-weight: 500;
-  text-transform: capitalize; */
-}
 .input {
   width: 70%;
   margin: 0 auto;
@@ -41,10 +21,10 @@
 .input__box input:placeholder {
   color: white;
 }
-
+  
 @media only screen and (max-width: 991px) {
   .input {
     width: 100% !important;
     margin: 0 auto;
   }
-}
+  }

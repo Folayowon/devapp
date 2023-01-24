@@ -67,7 +67,7 @@ const candidateRegisration = () => {
             <div className={Style.sideInfo_box}>
               <h4>Create Candidate For Voting</h4>
               <p>
-                Blockchain voting orgainzation, privide ethereum blockchain eco
+                Devapp Blockchain voting application, ethereum blockchain eco
                 system
               </p>
               <p className={Style.sideInfo_para}>Contract Candidate List</p>
