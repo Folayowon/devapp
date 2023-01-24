@@ -103,6 +103,4 @@ If well-deployed there will be a prompt like this in the terminal:
 # Usage:
 
 # License
-#� �d�e�v�a�p�p�-�m�a�i�n�
-�
-�
+This project is subject to the terms and conditions of the Grandida License. Please refer to the LICENSE.md file for more information.
