@@ -73,7 +73,8 @@ contract Devapp {
         votingOrganizer = msg.sender;
     }
 
-    function setCandidate(
+    function setCandidate( //allows the contract's "votingOrganizer" to set a new candidate,
+                            //by creating a new candidate struct and assigning values to its properties.
         address _address,
         string memory _age,
         string memory _name,
@@ -112,15 +113,15 @@ contract Devapp {
         );
     }
 
-    function getCandidate() public view returns (address[] memory) {
+    function getCandidate() public view returns (address[] memory) { //returns an array of candidate addresses.
         return candidateAddress;
     }
 
-    function getCandidateLength() public view returns (uint256) {
+    function getCandidateLength() public view returns (uint256) { //returns the length of the candidate address array.
         return candidateAddress.length;
     }
 
-    function getCandidateData(address _address)
+    function getCandidateData(address _address) //returns various information about a candidate, given an address.
         public
         view
         returns (
@@ -146,7 +147,8 @@ contract Devapp {
 
     ///////////////////VOTER/////////////////
 
-    function voterRight(
+    function voterRight( //allows the "votingOrganizer" to provide voting rights
+                          //to a specific address (by creating a new voter struct and assigning values to its properties).
         address _address,
         string memory _name,
         string memory _image,
