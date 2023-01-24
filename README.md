@@ -76,7 +76,7 @@ Once this is done:
 
 ` npm install @openzeppelin/contracts `
 
-npm install axios
+`npm install axios
 npm install dotenv
 npm install ethers
 npm install ipfs-http-client
@@ -86,7 +86,7 @@ npm install react-countdown
 npm install react-dom
 npm install react-dropzone
 npm install react-icons
-npm install web3modal
+npm install web3modal`
 
 * NB: these dependencies are necessary to initialize the environment.
 
