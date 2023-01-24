@@ -74,7 +74,7 @@ Once this is done:
 
 `npm install react-icons`
 
-_npm install @openzeppelin/contracts_
+//npm install @openzeppelin/contracts
 
 npm install axios
 npm install dotenv
