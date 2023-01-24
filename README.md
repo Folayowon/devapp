@@ -75,16 +75,27 @@ Once this is done:
 `npm install react-icons`
 
 ` npm install @openzeppelin/contracts `
+
 `npm install axios`
+
 `npm install dotenv`
+
 `npm install ethers`
+
 `npm install ipfs-http-client`
+
 `npm install next": "12.2.1`
+
 `npm install react`
+
 `npm install react-countdown`
+
 `npm install react-dom`
+
 `npm install react-dropzone`
+
 `npm install react-icons`
+
 `npm install web3modal`
 
 * NB: these dependencies are necessary to initialize the environment.
