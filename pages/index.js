@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { AiFillCaretRight } from "react-icons/ai";
 import Image from "next/image";
 import Countdown from "react-countdown";
 
@@ -29,6 +30,28 @@ const index = () => {
   return (
     <div className={Style.home}>
       {currentAccount && (
+        <div className={Style.container}>
+          <div className={Style.homeContainer}>
+            <p className={Style.container_title}>Be a part of Decision</p>
+            <div className={Style.home_vote}>
+              <span>Vote </span>
+              <span className={Style.voteColor}>Today</span>
+              <span className={Style.border}></span>
+            </div>
+            <div className={Style.voting}>
+              An online voting that will replace the centralized voting system
+            </div>
+            <div className={Style.accredited_voter}>
+              <AiFillCaretRight className={Style.icon} />
+              <div className={Style.accredited}>Get accredited to vote</div>
+            </div>
+            <div className={Style.btnContainer}>
+              <button className={Style.btn}>Register</button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* {currentAccount && (
         <div className={Style.winner}>
           <div className={Style.winner_info}>
             <div className={Style.candidate_list}>
@@ -48,7 +71,7 @@ const index = () => {
             </small>
           </div>
         </div>
-      )}
+      )} */}
 
       <Card candidateArray={candidateArray} giveVote={giveVote} />
     </div>

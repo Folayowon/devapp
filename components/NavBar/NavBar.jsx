@@ -2,11 +2,11 @@ import React, { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLock, AiFillUnlock } from "react-icons/ai";
-
 //INTERNAL IMPORT/
 import { VotingContext } from "../../context/Voter";
 import Style from "./NavBar.module.css";
-import loding from "../../loding.gif";
+// import loding from "../../loding.gif";
+import logo from "../../Log.svg";
 
 const NavBar = () => {
   const { connectWallet, error, currentAccount } = useContext(VotingContext);
@@ -34,53 +34,78 @@ const NavBar = () => {
       <div className={Style.navbar_box}>
         <div className={Style.title}>
           <Link href={{ pathname: "/" }}>
-            <Image src={loding} alt="logo" width={80} height={80} />
+            <Image src={logo} alt="logo" width={100} height={100} />
           </Link>
         </div>
-        <div className={Style.connect}>
-          {currentAccount ? (
-            <div>
-              <div className={Style.connect_flex}>
-                <button onClick={() => openNaviagtion()}>
-                  {currentAccount.slice(0, 10)}..
-                </button>
-                {currentAccount && (
-                  <span>
-                    {openNav ? (
-                      <AiFillUnlock onClick={() => openNaviagtion()} />
-                    ) : (
-                      <AiFillLock onClick={() => openNaviagtion()} />
-                    )}
-                  </span>
+        {/* /NAV SECTION */}
+        <div className={Style.nav_flex}>
+          <div className={[Style.navbar_section]}>
+            <p>
+              <Link href={{ pathname: "/" }}>Home</Link>
+            </p>
+
+            <p>
+              <Link href={{ pathname: "candidate-regisration" }}>
+                Candidate Registraction
+              </Link>
+            </p>
+            <p>
+              <Link href={{ pathname: "allowed-voters" }}>
+                Voter Registraction
+              </Link>
+            </p>
+
+            <p>
+              <Link href={{ pathname: "voterList" }}>Voter Lsit</Link>
+            </p>
+          </div>
+
+          <div className={Style.connect}>
+            {currentAccount ? (
+              <div>
+                <div className={Style.connect_flex}>
+                  <button onClick={() => openNaviagtion()}>
+                    {currentAccount.slice(0, 10)}..
+                  </button>
+                  {currentAccount && (
+                    <span>
+                      {openNav ? (
+                        <AiFillUnlock onClick={() => openNaviagtion()} />
+                      ) : (
+                        <AiFillLock onClick={() => openNaviagtion()} />
+                      )}
+                    </span>
+                  )}
+                </div>
+                {openNav && (
+                  <div className={Style.nav}>
+                    <div className={Style.navigation}>
+                      <p>
+                        <Link href={{ pathname: "/" }}>Home</Link>
+                      </p>
+
+                      <p>
+                        <Link href={{ pathname: "candidate-regisration" }}>
+                          Candidate Registraction
+                        </Link>
+                      </p>
+                      <p>
+                        <Link href={{ pathname: "allowed-voters" }}>
+                          Voter Registraction
+                        </Link>
+                      </p>
+
+                      <p>
+                        <Link href={{ pathname: "voterList" }}>Voter Lsit</Link>
+                      </p>
+                    </div>
+                  </div>
                 )}
               </div>
-
-              {openNav && (
-                <div className={Style.navigation}>
-                  <p>
-                    <Link href={{ pathname: "/" }}>Home</Link>
-                  </p>
-
-                  <p>
-                    <Link href={{ pathname: "candidate-regisration" }}>
-                      Candidate Registraction
-                    </Link>
-                  </p>
-                  <p>
-                    <Link href={{ pathname: "allowed-voters" }}>
-                      Voter Registraction
-                    </Link>
-                  </p>
-
-                  <p>
-                    <Link href={{ pathname: "voterList" }}>Voter Lsit</Link>
-                  </p>
-                </div>
-              )}
-            </div>
-          ) : (
-            <button onClick={() => connectWallet()}>Connect Wallet</button>
-          )}
+            ) : (
+              <button onClick={() => connectWallet()}>Connect Wallet</button>
+            )}
+          </div>
         </div>
       </div>
     </div>
