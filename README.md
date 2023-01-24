@@ -50,7 +50,7 @@ Once this is done:
 
 # STEP 1: install the required dependencies:
 
-_npm install @openzeppelin/contracts_
+//npm install @openzeppelin/contracts
 
 npm install axios
 npm install dotenv
