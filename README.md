@@ -1,5 +1,3 @@
-////////////////////////////////////////
-
 # Project Title:
 
 Decentralized Voting Application (Devapp)
