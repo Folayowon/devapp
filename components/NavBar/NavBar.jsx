@@ -73,7 +73,7 @@ const NavBar = () => {
                   </p>
 
                   <p>
-                    <Link href={{ pathname: "voterList" }}>Voter Lsit</Link>
+                    <Link href={{ pathname: "voterList" }}></Link>
                   </p>
                 </div>
               )}
