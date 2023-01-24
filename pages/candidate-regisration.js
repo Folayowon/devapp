@@ -76,7 +76,11 @@ const candidateRegisration = () => {
               {candidateArray.map((el, i) => (
                 <div key={i + 1} className={Style.card_box}>
                   <div className={Style.image}>
-                    <img src={el[3]} alt="Profile photo" />
+                    <img
+                      src={el[3]}
+                      alt="Profile photo"
+                      className={Style.image__img}
+                    />
                   </div>
 
                   <div className={Style.card_info}>
@@ -95,14 +99,16 @@ const candidateRegisration = () => {
 
       <div className={Style.voter}>
         <div className={Style.voter__container}>
-          <h1>Register New Candidate</h1>
+          <h1 className={Style.newCandidate}>Register New Candidate</h1>
           <div className={Style.voter__container__box}>
             <div className={Style.voter__container__box__div}>
               <div {...getRootProps()}>
                 <input {...getInputProps()} />
 
-                <div className={Style.voter__container__box__div_info}>
-                  <p>Upload File: JPG, PNG, GIF, WEBM MAX 100MB</p>
+                <div className={Style.voterContainer__box__div_info}>
+                  <p className={Style.voterContainer}>
+                    Upload File: JPG, PNG, GIF, WEBM MAX 100MB
+                  </p>
 
                   <div className={Style.voter__container__box__div__image}>
                     <Image
@@ -113,9 +119,10 @@ const candidateRegisration = () => {
                       alt="file upload"
                     />
                   </div>
-
-                  <p>Drag & Drop File</p>
-                  <p>or Browse media on your device</p>
+                  <div className={Style.voterContainer}>
+                    <p>Drag & Drop File</p>
+                    <p>or Browse media on your device</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,8 +166,12 @@ const candidateRegisration = () => {
 
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
-          <Image src={images.creator} alt="user profile" />
-          <p>Notice</p>
+          <Image
+            src={images.creator}
+            alt="user profile"
+            className={Style.voter_image}
+          />
+          <p className={Style.notice}>Notice</p>
           <p>
             Organizer <span>0xf39Fd6e51..</span>
           </p>

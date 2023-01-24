@@ -75,7 +75,7 @@
     }
 } */
 .container {
-  /* display: flex; */
+  display: flex;
   height: 70vh;
   position: relative;
   top: 5rem;
@@ -84,6 +84,11 @@
   margin: auto;
 }
 .homeContainer {
+  position: absolute;
+}
+.img {
+  position: absolute !important;
+  right: 0 !important;
 }
 .container_title {
   color: gray;
@@ -109,7 +114,7 @@
   width: 2%;
 }
 .voting {
-  width: 50%;
+  width: 70%;
   margin: 0px 0px 2rem 0px;
   /* border: 1px solid red; */
   font-size: 2rem;
@@ -136,6 +141,7 @@
   color: white;
   font-weight: 700;
   font-size: 18px;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -147,6 +153,9 @@
     /* border: 1px solid yellow; */
     width: 90%;
     margin: auto;
+  }
+  .img {
+    display: none;
   }
   .home_vote {
     /* border: 1px solid yellow; */

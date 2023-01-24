@@ -8,6 +8,7 @@ import { VotingContext } from "../context/Voter";
 import Style from "../styles/index.module.css";
 import Card from "../components/card/card";
 import image from "../candidate.png";
+import background from "../blockchain.svg";
 
 const index = () => {
   const {
@@ -31,6 +32,9 @@ const index = () => {
     <div className={Style.home}>
       {currentAccount && (
         <div className={Style.container}>
+          <span className={Style.img}>
+            <Image src={background} />
+          </span>
           <div className={Style.homeContainer}>
             <p className={Style.container_title}>Be a part of Decision</p>
             <div className={Style.home_vote}>

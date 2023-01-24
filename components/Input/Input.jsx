@@ -6,8 +6,8 @@ import Style from "./Input.module.css";
 const Input = ({ inputType, title, placeholder, handleClick }) => {
   return (
     <div className={Style.input}>
-      <p>{title}</p>
-      {/* // */}
+      <p className={Style.title}>{title}</p>
+
       {inputType === "text" ? (
         <div className={Style.input__box}>
           <input

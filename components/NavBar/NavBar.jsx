@@ -68,7 +68,7 @@ const NavBar = () => {
                     {currentAccount.slice(0, 10)}..
                   </button>
                   {currentAccount && (
-                    <span>
+                    <span className={Style.mobile}>
                       {openNav ? (
                         <AiFillUnlock onClick={() => openNaviagtion()} />
                       ) : (
