@@ -62,7 +62,7 @@ const allowedVoters = () => {
             </div>
           </div>
         )}
-  {/*
+        {/*
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
@@ -136,15 +136,15 @@ const allowedVoters = () => {
           <Input
             inputType="text"
             title="Address"
-            placeholder="Voter Address"
+            placeholder="wallet address"
             handleClick={(e) =>
               setFormInput({ ...formInput, address: e.target.value })
             }
           />
           <Input
             inputType="text"
-            title="Position"
-            placeholder="Voter Position"
+            title="Age"
+            placeholder="Age"
             handleClick={(e) =>
               setFormInput({ ...formInput, position: e.target.value })
             }
@@ -152,13 +152,13 @@ const allowedVoters = () => {
 
           <div className={Style.Button}>
             <Button
-              btnName="Authorized Voter"
+              btnName="Authorized"
               handleClick={() => createVoter(formInput, fileUrl, router)}
             />
           </div>
         </div>
       </div>
-            {/* 
+      {/* 
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
           <Image src={images.creator} alt="user profile" />
