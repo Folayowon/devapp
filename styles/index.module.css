@@ -1,76 +1,168 @@
-
-.home{
-    width: 70%;
-    margin: 0 auto;
-    margin-block: 2rem;
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
 }
 
-.winner{
-    margin-block: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.hero .heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.winner_info{
-    background-color: #231E39;
-    padding: 1rem;
-    border-radius: .2rem;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    align-items: center;
+.hero .heroLeft {
+  height: 350px;
+  width: 600px;
+  background-size: cover;
+  position: fixed;
+  bottom: 3px;
+  left: 100px;
+  color: white;
+  background-image: url("../assets/Asset21@4x.png");
+}
+.hero .heroRight {
+  color: red;
+  height: 450px;
+  width: 800px;
+  background-size: cover;
+  background-image: url("../assets/CompiledComponents.svg");
+  left: 48%;
+  position: fixed;
+  bottom: 3px;
+  overflow: hidden !important;
 }
 
-
-.winner_message{
-    background-color: #231E39;
-    padding: 2rem;
-    border-radius: .2rem;
-    font-size: 1.5rem;
-    color: #B3B8CD;
-    line-height: 0;
-    position: relative;
+.heroLeft .heroText {
+  position: fixed;
+  top: 230px;
+  line-height: 60px;
+  left: 120px;
+  overflow: hidden !important;
+  font-size: 28px;
 }
 
-.winner_message small{
-    font-size: 5rem;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-
+.heroLeft .heroText h3 {
+  line-height: 30px !important;
+  font-weight: 200;
+  height: 230px !important;
+  position: fixed;
 }
 
-
-.candidate_list{
-    background-color: #9a02ac;
-    font-size: 1rem;
-    padding: .1rem 1rem;
+.heroLeft .heroText h1 {
+  font-weight: bolder;
 }
 
-.candidate_list p{
-    font-weight: 600;
-}
-.candidate_list span{
-    background-color: #231E39;
-    padding: .5rem;
-    margin-left: .5rem;
-    color: #B3B8CD;
-    border-radius: .2rem;
+.heroLeft .heroText #voteTxt {
+  color: red;
 }
 
+.heroLeft .heroBtn {
+  position: fixed;
+  top: 550px;
+  left: 120px;
+}
 
+.heroLeft .heroBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 8px;
+  cursor: pointer;
+}
 
-@media screen  and (max-width: 35em){
-    .home{
-        width: 90%;
-    }
-    .winner{
-        grid-template-columns: repeat(1, 1fr); 
-    }
-    .winner_message small{
-        font-size: 2rem;
-    }
+.heroLeft .heroBtn .regBtn {
+  width: 58%;
+  padding: 15px !important;
+  background-color: #ff4e1f;
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.heroLeft .heroBtn h4 {
+  height: 20px;
+  font-weight: 200;
+}
+.heroLeft .heroBtn #regBtn {
+  background-color: red;
+  padding: 10px;
+  border-radius: 7px;
+  margin-top: -20px;
+  height: 15px;
+  text-align: center;
+}
+
+.home {
+  width: 70%;
+  margin: 0 auto;
+  margin-block: 2rem;
+}
+
+.winner {
+  margin-block: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.winner_info {
+  background-color: #231e39;
+  padding: 1rem;
+  border-radius: 0.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.winner_message {
+  background-color: #231e39;
+  padding: 2rem;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  color: #b3b8cd;
+  line-height: 0;
+  position: relative;
+}
+
+.winner_message small {
+  font-size: 5rem;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.candidate_list {
+  background-color:  #ff4e1f;
+  font-size: 1rem;
+  padding: 0.1rem 1rem;
+}
+
+.candidate_list p {
+  font-weight: 600;
+}
+.candidate_list span {
+  background-color: #231e39;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  color: #b3b8cd;
+  border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 35em) {
+  .home {
+    width: 90%;
+  }
+  .winner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .winner_message small {
+    font-size: 2rem;
+  }
 }
