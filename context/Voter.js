@@ -66,7 +66,7 @@ export const VotingProvider = ({ children }) => {
   };
 
   // ===========================================================
-  //CONNECT WELATE
+  //CONNECT WALLET FUNCTION
   const connectWallet = async () => {
     if (!window.ethereum) return alert("Please install MetaMask");
 

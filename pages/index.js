@@ -38,7 +38,7 @@ const index = () => {
               Vote <span id="voteTxt">Today.</span>
             </h1>
             <h3>
-              An online voting that will replace the <br /> centralized voting
+              An online voting platform that will replace the <br /> centralized voting
               system
             </h3>
           </div>
@@ -46,7 +46,7 @@ const index = () => {
           <div className={Style.heroBtn}>
             <h4>
               Do you like to be a part
-              of the outcome
+              of the outcome?
             </h4>
             <br />
             <div className={Style.regBtn}>Connect Wallet</div>
