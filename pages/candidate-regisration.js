@@ -62,12 +62,13 @@ const candidateRegisration = () => {
           </div>
         )}
 
+        {/* 
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
               <h4>Create Candidate For Voting</h4>
               <p>
-                Blockchain voting orgainzation, privide ethereum blockchain eco
+                Devapp Blockchain voting application, ethereum blockchain eco
                 system
               </p>
               <p className={Style.sideInfo_para}>Contract Candidate List</p>
@@ -91,6 +92,7 @@ const candidateRegisration = () => {
             </div>
           </div>
         )}
+              */}
       </div>
 
       <div className={Style.voter}>
@@ -156,7 +158,7 @@ const candidateRegisration = () => {
           </div>
         </div>
       </div>
-
+      {/*
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
           <Image src={images.creator} alt="user profile" />
@@ -170,6 +172,7 @@ const candidateRegisration = () => {
           </p>
         </div>
       </div>
+          */}
     </div>
   );
 };

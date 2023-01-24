@@ -6,7 +6,7 @@ import { AiFillLock, AiFillUnlock } from "react-icons/ai";
 //INTERNAL IMPORT/
 import { VotingContext } from "../../context/Voter";
 import Style from "./NavBar.module.css";
-import loding from "../../loding.gif";
+import logoImg from '../../assets/Logo.svg';
 
 const NavBar = () => {
   const { connectWallet, error, currentAccount } = useContext(VotingContext);
@@ -29,12 +29,12 @@ const NavBar = () => {
             <p>{error}</p>
           </div>
         </div>
-      )}
+      )} 
 
       <div className={Style.navbar_box}>
         <div className={Style.title}>
           <Link href={{ pathname: "/" }}>
-            <Image src={loding} alt="logo" width={80} height={80} />
+            <Image src={logoImg} alt="logo" width={80} height={80} />
           </Link>
         </div>
         <div className={Style.connect}>

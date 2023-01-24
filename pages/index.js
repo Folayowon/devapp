@@ -28,6 +28,30 @@ const index = () => {
 
   return (
     <div className={Style.home}>
+      <div className={Style.hero}>
+        <div className={Style.heroLeft}>
+          <div className={Style.heroText}>
+            <h4>Be a Part of Decision</h4>
+            <h1 style={{ overflow: "hidden" }}>
+              Vote <span id="voteTxt">Today.</span>
+            </h1>
+            <h3>
+              An online voting that will replace the <br /> centralized voting
+              system
+            </h3>
+          </div>
+
+          <div className={Style.heroBtn}>
+            <h4>
+              Do you like to be a part
+              of the outcome
+            </h4>
+            <br />
+            <div className={Style.regBtn}>Connect Wallet</div>
+          </div>
+        </div>
+        <div className={Style.heroRight}></div>
+      </div>
       {currentAccount && (
         <div className={Style.winner}>
           <div className={Style.winner_info}>
@@ -44,7 +68,7 @@ const index = () => {
           </div>
           <div className={Style.winner_message}>
             <small>
-              <Countdown date={Date.now() + 10000} />
+              <Countdown date={Date.now() + 1000000000} />
             </small>
           </div>
         </div>

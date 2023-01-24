@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useContext } from "react";
+import { useState, useMemo, useCallback, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
@@ -10,25 +10,26 @@ import images from "../assets";
 import Button from "../components/Button/Button";
 import Input from "../components/Input/Input";
 
-const allowedVoters = () => {
+const candidateRegisration = () => {
   const [fileUrl, setFileUrl] = useState(null);
-  const [formInput, setFormInput] = useState({
+  const {
+    uploadToIPFSCandidate,
+    setCandidate,
+    getNewCandidate,
+    candidateArray,
+  } = useContext(VotingContext);
+  const [candidateForm, setCandidateForm] = useState({
     name: "",
     address: "",
-    position: "",
+    age: "",
   });
 
   const router = useRouter();
 
-  const { uploadToIPFS, createVoter, getNewCandidate, voterArray } =
-    useContext(VotingContext);
-
-  console.log(voterArray);
-
   //-------------VOTERS
   const onDrop = useCallback(async (acceptedFile) => {
-    const url = await uploadToIPFS(acceptedFile[0]);
-
+    const url = await uploadToIPFSCandidate(acceptedFile[0]);
+    console.log(url);
     setFileUrl(url);
   }, []);
 
@@ -40,9 +41,7 @@ const allowedVoters = () => {
 
   useEffect(() => {
     getNewCandidate();
-    console.log(voterArray);
   }, []);
-
   return (
     <div className={Style.createVoter}>
       <div>
@@ -51,18 +50,18 @@ const allowedVoters = () => {
             <img src={fileUrl} alt="asset_file" />
             <div className={Style.voterInfo_paragraph}>
               <p>
-                Name: <span>&nbsp;{formInput.name}</span>{" "}
+                Name: <span>&nbsp;{candidateForm.name}</span>
               </p>
               <p>
-                Add:&nbsp; <span>{formInput.address.slice(0, 20)} </span>
+                Add:&nbsp; <span>{candidateForm.address.slice(0, 20)} </span>
               </p>
               <p>
-                Pos:&nbsp;<span>{formInput.position}</span>
+                age:&nbsp;<span>{candidateForm.age}</span>
               </p>
             </div>
           </div>
         )}
-  {/*
+
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
@@ -74,30 +73,29 @@ const allowedVoters = () => {
               <p className={Style.sideInfo_para}>Contract Candidate List</p>
             </div>
             <div className={Style.car}>
-              {voterArray.map((el, i) => (
+              {candidateArray.map((el, i) => (
                 <div key={i + 1} className={Style.card_box}>
                   <div className={Style.image}>
-                    <img src={el[4]} alt="Profile photo" />
+                    <img src={el[3]} alt="Profile photo" />
                   </div>
 
                   <div className={Style.card_info}>
                     <p>
-                      {el[1]} #{el[1].toNumber()}
+                      {el[1]} #{el[2].toNumber()}
                     </p>
                     <p>{el[0]}</p>
-                    <p>Address: {el[3].slice(0, 10)}..</p>
+                    <p>Address: {el[6].slice(0, 10)}..</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         )}
-              */}
       </div>
 
       <div className={Style.voter}>
         <div className={Style.voter__container}>
-          <h1>Create New Voter</h1>
+          <h1>Register New Candidate</h1>
           <div className={Style.voter__container__box}>
             <div className={Style.voter__container__box__div}>
               <div {...getRootProps()}>
@@ -130,7 +128,7 @@ const allowedVoters = () => {
             title="Name"
             placeholder="Voter Name"
             handleClick={(e) =>
-              setFormInput({ ...formInput, name: e.target.value })
+              setCandidateForm({ ...candidateForm, name: e.target.value })
             }
           />
           <Input
@@ -138,27 +136,27 @@ const allowedVoters = () => {
             title="Address"
             placeholder="Voter Address"
             handleClick={(e) =>
-              setFormInput({ ...formInput, address: e.target.value })
+              setCandidateForm({ ...candidateForm, address: e.target.value })
             }
           />
           <Input
             inputType="text"
-            title="Position"
+            title="Age"
             placeholder="Voter Position"
             handleClick={(e) =>
-              setFormInput({ ...formInput, position: e.target.value })
+              setCandidateForm({ ...candidateForm, age: e.target.value })
             }
           />
 
           <div className={Style.Button}>
             <Button
-              btnName="Authorized Voter"
-              handleClick={() => createVoter(formInput, fileUrl, router)}
+              btnName="Authorized Candidate"
+              handleClick={() => setCandidate(candidateForm, fileUrl, router)}
             />
           </div>
         </div>
       </div>
-            {/* 
+
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
           <Image src={images.creator} alt="user profile" />
@@ -172,9 +170,8 @@ const allowedVoters = () => {
           </p>
         </div>
       </div>
-          */}
     </div>
   );
 };
 
-export default allowedVoters;
+export default candidateRegisration;

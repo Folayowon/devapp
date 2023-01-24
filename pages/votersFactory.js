@@ -1,9 +1,10 @@
+
 import { useState, useEffect, useCallback, useContext } from "react";
 import { useRouter } from "next/router";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
 
-//INTRNAL IMPORT
+//INTERNAL IMPORT
 import { VotingContext } from "../context/Voter";
 import Style from "../styles/allowedVoter.module.css";
 import images from "../assets";
@@ -62,7 +63,7 @@ const allowedVoters = () => {
             </div>
           </div>
         )}
-  {/*
+
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
@@ -92,7 +93,6 @@ const allowedVoters = () => {
             </div>
           </div>
         )}
-              */}
       </div>
 
       <div className={Style.voter}>
@@ -158,7 +158,7 @@ const allowedVoters = () => {
           </div>
         </div>
       </div>
-            {/* 
+
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
           <Image src={images.creator} alt="user profile" />
@@ -167,12 +167,10 @@ const allowedVoters = () => {
             Organizer <span>0xf39Fd6e51..</span>
           </p>
           <p>
-            Only organizer of the voting contract can create voter and candidate
-            for voting election
+            Please, note that only the authorizer can add both voters and candidates.
           </p>
         </div>
       </div>
-          */}
     </div>
   );
 };

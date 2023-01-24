@@ -2,7 +2,7 @@
 .navbar{
     width: 100%;
     height: 5.5rem;
-    background-color: #231E39;
+    background-color:#17222e;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     margin-bottom: 2rem;
 }
@@ -23,7 +23,7 @@
 }
 
 .connect{
-    background-color: #9a02ac;
+    background-color: #ff4e1f;
     padding: .5rem 2rem;
     border-radius: .2rem;
     cursor: pointer;
@@ -33,7 +33,7 @@
 
 .navigation{
     position: absolute;
-    background-color: #9a02ac;
+    background-color:  #ff4e1f;
     padding: 1rem;
     width: 15rem;
     left: 0;
