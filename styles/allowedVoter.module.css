@@ -90,19 +90,7 @@
 
 /* ///////////////////////////MODaL */
 .voterInfo {
-  position: absolute;
-  /* top: 12rem;
-  left: 3rem;
-  width: 15rem;
-  height: 15rem; */
-  padding: 1rem;
   width: 100%;
-  background-color: #231e39;
-  border-radius: 25px;
-  box-shadow: 0px 0px 15px;
-
-  color: #b3b8cd;
-  text-align: start;
 }
 
 .voterInfo img {
