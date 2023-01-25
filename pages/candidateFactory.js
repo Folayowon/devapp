@@ -9,6 +9,7 @@ import Style from "../styles/allowedVoter.module.css";
 import images from "../assets";
 import Button from "../components/Button/Button";
 import Input from "../components/Input/Input";
+import voter from "../voter.jpg";
 
 const candidateRegisration = () => {
   const [fileUrl, setFileUrl] = useState(null);
@@ -166,11 +167,7 @@ const candidateRegisration = () => {
 
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
-          <Image
-            src={images.creator}
-            alt="user profile"
-            className={Style.voter_image}
-          />
+          <Image src={voter} alt="user profile" className={Style.voter_image} />
           <p className={Style.notice}>Notice</p>
           <p>
             Organizer <span>0xf39Fd6e51..</span>
