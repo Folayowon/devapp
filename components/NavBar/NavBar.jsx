@@ -26,7 +26,7 @@ const NavBar = () => {
       ) : (
         <div className={Style.message__Box}>
           <div style={Style.message}>
-            <p>{error}</p>
+            <p className={Style.text}>{error}</p>
           </div>
         </div>
       )}
