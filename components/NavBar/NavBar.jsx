@@ -47,17 +47,17 @@ const NavBar = () => {
 
               <p>
                 <Link href={{ pathname: "candidateFactory" }}>
-                  Candidate Registration
+                  Candidates
                 </Link>
               </p>
               <p>
                 <Link href={{ pathname: "votersFactory" }}>
-                  Voter Registration
+                  Voters
                 </Link>
               </p>
 
               <p>
-                <Link href={{ pathname: "ListOfVoters" }}>Voter List</Link>
+                <Link href={{ pathname: "ListOfVoters" }}>Election Summary</Link>
               </p>
             </div>
           )}
@@ -88,18 +88,18 @@ const NavBar = () => {
 
                       <p>
                         <Link href={{ pathname: "candidateFactory" }}>
-                          Candidate Registration
+                          Candidates
                         </Link>
                       </p>
                       <p>
                         <Link href={{ pathname: "votersFactory" }}>
-                          Voter Registration
+                          Voters
                         </Link>
                       </p>
 
                       <p>
                         <Link href={{ pathname: "ListOfVoters" }}>
-                          Voter List
+                          Election Summary
                         </Link>
                       </p>
                     </div>

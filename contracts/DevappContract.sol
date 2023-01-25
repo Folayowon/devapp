@@ -156,7 +156,7 @@ contract Devapp {
     ) public {
         require(
             votingOrganizer == msg.sender,
-            "You have no right to provide authorization for vote"
+            "Ops! Only the authorizer can perform this operation."
         );
 
         _voterId.increment();
@@ -196,8 +196,8 @@ contract Devapp {
     {
         Voter storage voter = voters[msg.sender];
 
-        require(!voter.voter_voted, "You have already voted");
-        require(voter.voter_allowed != 0, "You have no right to vote");
+        require(!voter.voter_voted, "You can't vote twice.");
+        require(voter.voter_allowed != 0, "You can't vote twice.");
 
         voter.voter_voted = true;
         voter.voter_vote = _candidateVoteId;
@@ -242,4 +242,23 @@ contract Devapp {
     function getVoterList() public view returns (address[] memory) {
         return votersAddress;
     }
+
+    bool public electionActive;
+
+
+enum ElectionState { NotStarted, Started, Ended }
+ElectionState public state;
+
+function startElection() public {
+    require(
+        msg.sender == votingOrganizer,
+        "You have no authorization to start the election"
+    );
+    require(state == ElectionState.NotStarted, "Election has already started.");
+    state = ElectionState.Started;
+    // Code to start the election
 }
+
+}
+
+

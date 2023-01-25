@@ -177,7 +177,7 @@ export const VotingProvider = ({ children }) => {
       const voteredList = await contract.vote(voterAddress, voterId);
       console.log(voteredList);
     } catch (error) {
-      setError("Sorry!, You have already voted, Reload Browser");
+      setError("Ops! You can't vote twice. Reload Browser");
     }
   };
   // =============================================

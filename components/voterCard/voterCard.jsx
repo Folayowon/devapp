@@ -23,7 +23,7 @@ const voterCard = ({ voterArray }) => {
               Over the years, I have acquired relevant skills and experience.
             </p>
             <p className={voterCardStyle.vote_Status}>
-              {el[6] == true ? "You Already Voted" : "Not Voted"}
+              {el[6] == true ? "You can't vote twice." : "You haven't voted yet."}
             </p>
           </div>
         </div>
