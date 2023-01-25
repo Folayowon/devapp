@@ -44,7 +44,10 @@ const allowedVoters = () => {
   }, []);
 
   return (
-    <div className={Style.createVoter}>
+    <div className={Style.voterCreate}>
+      <span className={Style.image}>
+        <Image src={images.assets} />
+      </span>
       <div>
         {fileUrl && (
           <div className={Style.voterInfo}>
@@ -95,7 +98,7 @@ const allowedVoters = () => {
               */}
       </div>
 
-      <div className={Style.voter}>
+      <div className={Style.voters}>
         <div className={Style.voter__container}>
           <h1>Create New Voter</h1>
           <div className={Style.voter__container__box}>
@@ -109,8 +112,8 @@ const allowedVoters = () => {
                   <div className={Style.voter__container__box__div__image}>
                     <Image
                       src={images.upload}
-                      width={150}
-                      height={150}
+                      width={50}
+                      height={50}
                       objectFit="contain"
                       alt="file upload"
                     />

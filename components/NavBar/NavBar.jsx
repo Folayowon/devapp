@@ -39,26 +39,28 @@ const NavBar = () => {
         </div>
         {/* /NAV SECTION */}
         <div className={Style.nav_flex}>
-          <div className={[Style.navbar_section]}>
-            <p>
-              <Link href={{ pathname: "/" }}>Home</Link>
-            </p>
+          {currentAccount && (
+            <div className={[Style.navbar_section]}>
+              <p>
+                <Link href={{ pathname: "/" }}>Home</Link>
+              </p>
 
-            <p>
-              <Link href={{ pathname: "candidateFactory" }}>
-                Candidate Registration
-              </Link>
-            </p>
-            <p>
-              <Link href={{ pathname: "votersFactory" }}>
-                Voter Registration
-              </Link>
-            </p>
+              <p>
+                <Link href={{ pathname: "candidateFactory" }}>
+                  Candidate Registration
+                </Link>
+              </p>
+              <p>
+                <Link href={{ pathname: "votersFactory" }}>
+                  Voter Registration
+                </Link>
+              </p>
 
-            <p>
-              <Link href={{ pathname: "ListOfVoters" }}>Voter List</Link>
-            </p>
-          </div>
+              <p>
+                <Link href={{ pathname: "ListOfVoters" }}>Voter List</Link>
+              </p>
+            </div>
+          )}
 
           <div className={Style.connect}>
             {currentAccount ? (

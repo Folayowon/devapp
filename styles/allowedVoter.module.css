@@ -4,12 +4,26 @@
   margin-block: 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  position: relative;
   gap: 2rem;
+}
+.voterCreate {
+  display: flex;
+  position: relative;
+}
+
+.voters {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: 0 auto;
+  color: white;
 }
 .voter {
   /* background-color: #231e39; */
   border-radius: 10px;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   color: #b3b8cd;
   padding: 2rem;
 }
@@ -21,8 +35,9 @@
   color: white;
 }
 .voter__container__box {
-  width: 70%;
-
+  width: 50%;
+  padding: 2px 10px;
+  font-size: 10px;
   margin: auto;
   text-align: center;
   border: 1px dotted white;
@@ -76,11 +91,12 @@
 /* ///////////////////////////MODaL */
 .voterInfo {
   position: absolute;
-  top: 12rem;
+  /* top: 12rem;
   left: 3rem;
   width: 15rem;
-  height: 15rem;
+  height: 15rem; */
   padding: 1rem;
+  width: 100%;
   background-color: #231e39;
   border-radius: 25px;
   box-shadow: 0px 0px 15px;
@@ -91,14 +107,14 @@
 
 .voterInfo img {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   border-radius: 25px;
 }
 
 .voterInfo_paragraph {
   background-color: #231e39;
   border-radius: 25px;
-  box-shadow: 0px 0px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 
   color: #b3b8cd;
   height: 9rem;
@@ -116,7 +132,7 @@
 
 .sideInfo {
   background-color: transparent;
-  box-shadow: 0px 0px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 1rem;
   color: #b3b8cd;
@@ -150,7 +166,7 @@
   color: red;
   display: none;
   padding: 0.2rem;
-  box-shadow: 0px 0px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   border-radius: 0.3rem;
 }
 .image .img {
@@ -163,7 +179,7 @@
 .createdVorter__info {
   /* background-color: #231e39; */
   border-radius: 5px;
-  box-shadow: 0px 0px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   color: white;
   padding: 2rem;
 }

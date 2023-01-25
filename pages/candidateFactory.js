@@ -113,8 +113,8 @@ const candidateRegisration = () => {
                   <div className={Style.voter__container__box__div__image}>
                     <Image
                       src={images.upload}
-                      width={150}
-                      height={150}
+                      width={50}
+                      height={50}
                       objectFit="contain"
                       alt="file upload"
                     />
