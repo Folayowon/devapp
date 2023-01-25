@@ -54,7 +54,7 @@ const index = () => {
         </div>
         <div className={Style.heroRight}></div>
       </div> */}
-      {currentAccount && (
+      {
         <div className={Style.container}>
           <span className={Style.img}>
             <Image src={background} />
@@ -78,7 +78,7 @@ const index = () => {
             </div>
           </div>
         </div>
-      )}
+      }
       {/* {currentAccount && (
         <div className={Style.winner}>
           <div className={Style.winner_info}>
