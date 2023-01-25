@@ -38,7 +38,7 @@ The logo for the Decentralized Voting Application (Devapp) combines the symbol o
 
 # Project Website Link:
 
-https://devapp-one.vercel.app/
+https://devapp-folayowon.vercel.app
 
 # Project Author:
 
