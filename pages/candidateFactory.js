@@ -46,7 +46,6 @@ const candidateRegisration = () => {
   return (
     <div className={Style.createVoter}>
       <div>
-        \
         <div className={Style.sideInfo}>
           <div className={Style.sideInfo_box}>
             <h4>Create Candidate For Voting</h4>
