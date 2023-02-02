@@ -126,7 +126,7 @@ export const VotingProvider = ({ children }) => {
     const voter = await contract.voterRight(address, name, url, fileUrl);
     voter.wait();
 
-    router.push("/voterList");
+    router.push("/ListOfVoters");
   };
   // =============================================
 
