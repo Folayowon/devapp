@@ -54,7 +54,7 @@
           "type": "string"
         }
       ],
-      "name": "CandidateCreate",
+      "name": "Candidate_create_fx",
       "type": "event"
     },
     {
@@ -109,7 +109,7 @@
           "type": "string"
         }
       ],
-      "name": "VoterCreated",
+      "name": "Voter_create_fx",
       "type": "event"
     },
     {
