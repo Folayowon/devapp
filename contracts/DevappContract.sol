@@ -1,8 +1,23 @@
-// SPDX-License-Identifier: UNLICENSED
+// MIT-License-Identifier:
 pragma solidity ^0.8.9;
 
+
+//* @ this is to import the dependencies required for some functions in this code
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
+
+
+// this contract is creates a list of candidates,
+// and maps the details of each candidate sequentially,
+// it also creates a list of  voters,
+// and maps the details of each voter sequentially,
+
+// the deployer's contract is attached as the authorizer and the authorizer can create
+// add candidates and voters (only the authorizer will be able to perform these functions)
+// the authorizer can also start the election and the election will end once the time's elapsed.
+
+
+// Each voter can only vote once and have to connect with their wallet to interact with the smart contract.
 
 contract Devapp {
     using Counters for Counters.Counter;
@@ -12,7 +27,7 @@ contract Devapp {
 
     address public votingOrganizer;
 
-    ///CANDIDATE FOR VOTING
+    ///Candidate Details
     struct Candidate {
         uint256 candidateId;
         string age;
@@ -23,7 +38,8 @@ contract Devapp {
         string ipfs;
     }
 
-    event CandidateCreate(
+
+    event Candidate_create_fx(
         uint256 indexed candidateId,
         string age,
         string name,
@@ -37,8 +53,7 @@ contract Devapp {
 
     mapping(address => Candidate) public candidates;
 
-    /////////////END
-    ////////////VOTERS////////////////////////
+    //Voter Details
 
     address[] public votedVoters;
 
@@ -56,7 +71,7 @@ contract Devapp {
         string voter_ipfs;
     }
 
-    event VoterCreated(
+    event Voter_create_fx(
         uint256 indexed voter_voterId,
         string voter_name,
         string voter_image,
@@ -67,7 +82,7 @@ contract Devapp {
         string voter_ipfs
     );
 
-    ////////////VOTERS////////////////////////
+    //Voters Requirement 
 
     constructor() {
         votingOrganizer = msg.sender;
@@ -102,7 +117,7 @@ contract Devapp {
 
         candidateAddress.push(_address);
 
-        emit CandidateCreate(
+        emit Candidate_create_fx(
             candidate.candidateId,
             _age,
             _name,
@@ -145,7 +160,7 @@ contract Devapp {
         );
     }
 
-    ///////////////////VOTER/////////////////
+    
 
     function voterRight( //allows the "votingOrganizer" to provide voting rights
                           //to a specific address (by creating a new voter struct and assigning values to its properties).
@@ -178,7 +193,7 @@ contract Devapp {
 
         votersAddress.push(_address);
 
-        emit VoterCreated(
+        emit Voter_create_fx(
             voter.voter_voterId,
             _name,
             _image,
@@ -248,7 +263,7 @@ contract Devapp {
 
 enum ElectionState { NotStarted, Started, Ended }
 ElectionState public state;
-
+// Code to start the election
 function startElection() public {
     require(
         msg.sender == votingOrganizer,
@@ -256,7 +271,7 @@ function startElection() public {
     );
     require(state == ElectionState.NotStarted, "Election has already started.");
     state = ElectionState.Started;
-    // Code to start the election
+    
 }
 
 }
