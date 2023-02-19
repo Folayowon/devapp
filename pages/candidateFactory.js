@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
+import "../styles/globals.css";
 
 //INTRNAL IMPORT
 import { VotingContext } from "../context/Voter";
