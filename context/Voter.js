@@ -54,14 +54,14 @@ export const VotingProvider = ({ children }) => {
   const checkIfWalletIsConnected = async () => {
     if (!window.ethereum) return setError("Please Install MetaMask");
 
-    const account = await window.ethereum.request({ method: "eth_accounts" });
+      const account = await window.ethereum.request({ method: "eth_accounts" });
 
     if (account.length) {
       setCurrentAccount(account[0]);
       getAllVoterData();
       getNewCandidate();
     } else {
-      setError("Please Install MetaMask & Connect, Reload");
+      setError("Please Connect your wallet");
     }
   };
 
@@ -125,7 +125,7 @@ export const VotingProvider = ({ children }) => {
     const data = JSON.stringify({ name, address, position, image: fileUrl });
     const added = await client.add(data);
 
-    const url = `${subdomain}/ipfs/${added.path}`; // `https://ipfs.infura.io/ipfs/${added.path}`;
+    const url = `${subdomain}/ipfs/${added.path}`; //`${subdomain}/ipfs/${added.path}` `https://ipfs.infura.io/ipfs/${added.path}`;
 
     const voter = await contract.voterRight(address, name, url, fileUrl);
     voter.wait();
@@ -141,12 +141,16 @@ export const VotingProvider = ({ children }) => {
       const provider = new ethers.providers.Web3Provider(connection);
       const signer = provider.getSigner();
       const contract = fetchContract(signer);
+      console.log("hey, Timmy", contract)
       //VOTR LIST
       const voterListData = await contract.getVoterList();
+      console.log("hey, Timmy", voterListData)
       setVoterAddress(voterListData);
-
+      
       voterListData.map(async (el) => {
-        const singleVoterData = await contract.getVoterData(el);
+        
+        const singleVoterData = await contract.getVoterData(el);v
+        
         pushVoter.push(singleVoterData);
       });
 
@@ -201,7 +205,7 @@ export const VotingProvider = ({ children }) => {
     });
     const added = await client.add(data);
     console.log ("added ...", added)
-    const ipfs = `${subdomain}/ipfs/${added.path}`; //`https://ipfs.infura.io/ipfs/${added.path}`;
+    const ipfs = `${subdomain}/ipfs/${added.path}`; // `${subdomain}/ipfs/${added.path}``https://ipfs.infura.io/ipfs/${added.path}`;
 
     const candidate = await contract.setCandidate(
       address,
