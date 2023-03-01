@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
+import "../styles/globals.css";
 
 //INTRNAL IMPORT
 import { VotingContext } from "../context/Voter";
@@ -46,56 +47,37 @@ const candidateRegisration = () => {
   return (
     <div className={Style.createVoter}>
       <div>
-        {fileUrl && (
-          <div className={Style.voterInfo}>
-            <img src={fileUrl} alt="asset_file" />
-            <div className={Style.voterInfo_paragraph}>
-              <p>
-                Name: <span>&nbsp;{candidateForm.name}</span>
-              </p>
-              <p>
-                Add:&nbsp; <span>{candidateForm.address.slice(0, 20)} </span>
-              </p>
-              <p>
-                age:&nbsp;<span>{candidateForm.age}</span>
-              </p>
-            </div>
+        <div className={Style.sideInfo}>
+          <div className={Style.sideInfo_box}>
+            <h4>Create Candidate For Voting</h4>
+            <p>
+              Devapp Blockchain voting application, ethereum blockchain eco
+              system
+            </p>
+            <p className={Style.sideInfo_para}>Contract Candidate List</p>
           </div>
-        )}
-
-        {!fileUrl && (
-          <div className={Style.sideInfo}>
-            <div className={Style.sideInfo_box}>
-              <h4>Create Candidate For Voting</h4>
-              <p>
-                Devapp Blockchain voting application, ethereum blockchain eco
-                system
-              </p>
-              <p className={Style.sideInfo_para}>Contract Candidate List</p>
-            </div>
-            <div className={Style.car}>
-              {candidateArray.map((el, i) => (
-                <div key={i + 1} className={Style.card_box}>
-                  <div className={Style.image}>
-                    <img
-                      src={el[3]}
-                      alt="Profile photo"
-                      className={Style.image__img}
-                    />
-                  </div>
-
-                  <div className={Style.card_info}>
-                    <p>
-                      {el[1]} #{el[2].toNumber()}
-                    </p>
-                    <p>{el[0]}</p>
-                    <p>Address: {el[6].slice(0, 10)}..</p>
-                  </div>
+          <div className={Style.car}>
+            {candidateArray.map((el, i) => (
+              <div key={i + 1} className={Style.card_box}>
+                <div className={Style.image}>
+                  <img
+                    src={el[3]}
+                    alt="Profile photo"
+                    className={Style.image__img}
+                  />
                 </div>
-              ))}
-            </div>
+
+                <div className={Style.card_info}>
+                  <p>
+                    {el[1]} #{el[2].toNumber()}
+                  </p>
+                  <p>{el[0]}</p>
+                  <p>Address: {el[6].slice(0, 10)}..</p>
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
 
       <div className={Style.voter}>
@@ -107,22 +89,34 @@ const candidateRegisration = () => {
                 <input {...getInputProps()} />
 
                 <div className={Style.voterContainer__box__div_info}>
-                  <p className={Style.voterContainer}>
-                    Upload File: JPG, PNG, GIF, WEBM MAX 100MB
-                  </p>
-
                   <div className={Style.voter__container__box__div__image}>
-                    <Image
-                      src={images.upload}
-                      width={50}
-                      height={50}
-                      objectFit="contain"
-                      alt="file upload"
-                    />
-                  </div>
-                  <div className={Style.voterContainer}>
-                    <p>Drag & Drop File</p>
-                    <p>or Browse media on your device</p>
+                    {fileUrl && (
+                      <div>
+                        <img
+                          className={Style.voterInfo}
+                          src={fileUrl}
+                          alt="asset_file"
+                        />
+                      </div>
+                    )}
+                    {!fileUrl && (
+                      <div>
+                        <p className={Style.voterContainer}>
+                          Upload File: JPG, PNG, GIF, WEBM MAX 100MB
+                        </p>
+                        <Image
+                          src={images.upload}
+                          width={50}
+                          height={50}
+                          objectFit="contain"
+                          alt="file upload"
+                        />
+                        <div className={Style.voterContainer}>
+                          <p>Drag & Drop File</p>
+                          <p>or Browse media on your device</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

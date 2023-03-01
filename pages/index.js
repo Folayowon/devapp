@@ -15,6 +15,7 @@ const index = () => {
     getNewCandidate,
     candidateArray,
     giveVote,
+    connectWallet,
     checkIfWalletIsConnected,
     candidateLength,
     getAllVoterData,
@@ -74,7 +75,12 @@ const index = () => {
               <div className={Style.accredited}>Get accredited to vote</div>
             </div>
             <div className={Style.btnContainer}>
-              <button className={Style.btn}>Register</button>
+              {/* <button >Register</button> */}
+              {!currentAccount && (
+                <button className={Style.btn} onClick={() => connectWallet()}>
+                  Connect Wallet
+                </button>
+              )}
             </div>
           </div>
         </div>

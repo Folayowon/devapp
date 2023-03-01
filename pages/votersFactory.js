@@ -49,7 +49,7 @@ const allowedVoters = () => {
         <Image src={images.assets} />
       </span>
       <div>
-        {fileUrl && (
+        {/* {fileUrl && (
           <div className={Style.voterInfo}>
             <img src={fileUrl} alt="asset_file" />
             <div className={Style.voterInfo_paragraph}>
@@ -64,7 +64,7 @@ const allowedVoters = () => {
               </p>
             </div>
           </div>
-        )}
+        )} */}
         {/*
         {!fileUrl && (
           <div className={Style.sideInfo}>
@@ -105,8 +105,36 @@ const allowedVoters = () => {
             <div className={Style.voter__container__box__div}>
               <div {...getRootProps()}>
                 <input {...getInputProps()} />
-
-                <div className={Style.voter__container__box__div_info}>
+                <div className={Style.voter__container__box__div__image}>
+                  {fileUrl && (
+                    <div>
+                      <img
+                        className={Style.voterInfo}
+                        src={fileUrl}
+                        alt="asset_file"
+                      />
+                    </div>
+                  )}
+                  {!fileUrl && (
+                    <div>
+                      <p className={Style.voterContainer}>
+                        Upload File: JPG, PNG, GIF, WEBM MAX 100MB
+                      </p>
+                      <Image
+                        src={images.upload}
+                        width={50}
+                        height={50}
+                        objectFit="contain"
+                        alt="file upload"
+                      />
+                      <div className={Style.voterContainer}>
+                        <p>Drag & Drop File</p>
+                        <p>or Browse media on your device</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {/* <div className={Style.voter__container__box__div_info}>
                   <p>Upload File: JPG, PNG, GIF, WEBM MAX 100MB</p>
 
                   <div className={Style.voter__container__box__div__image}>
@@ -121,7 +149,7 @@ const allowedVoters = () => {
 
                   <p>Drag & Drop File</p>
                   <p>or Browse media on your device</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

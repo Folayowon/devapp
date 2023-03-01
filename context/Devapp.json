@@ -54,7 +54,11 @@
           "type": "string"
         }
       ],
+<<<<<<< HEAD
       "name": "CandidateCreated",
+=======
+      "name": "Candidate_create_fx",
+>>>>>>> 4e231b84afb0263b872a9674c0e9de1dc2ee20aa
       "type": "event"
     },
     {
@@ -109,7 +113,7 @@
           "type": "string"
         }
       ],
-      "name": "VoterCreated",
+      "name": "Voter_create_fx",
       "type": "event"
     },
     {

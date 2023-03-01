@@ -8,16 +8,13 @@ import { useRouter } from "next/router";
 //INTERNAL IMPORT
 import { VotingAddress, VotingAddressABI } from "./constants";
 
-
 const projectId = "2Kdq3ptwRNMhda7ZECqgVSl3yBe";
 const projectSecretKey = "612c7614ea7760dfd3a4470623b353ef";
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString(
   "base64"
 )}`;
 
-const subdomain = "https://devapp.infura-ipfs.io"
-
-
+const subdomain = "https://devapp.infura-ipfs.io";
 
 const client = ipfsHttpClient({
   host: "infura-ipfs.io",
@@ -27,7 +24,6 @@ const client = ipfsHttpClient({
     authorization: auth,
   },
 });
-
 
 const fetchContract = (signerOrProvider) =>
   new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
@@ -130,7 +126,7 @@ export const VotingProvider = ({ children }) => {
     const voter = await contract.voterRight(address, name, url, fileUrl);
     voter.wait();
 
-    router.push("/voterList");
+    router.push("/ListOfVoters");
   };
   // =============================================
 
@@ -204,8 +200,13 @@ export const VotingProvider = ({ children }) => {
       age,
     });
     const added = await client.add(data);
+<<<<<<< HEAD
     console.log ("added ...", added)
     const ipfs = `${subdomain}/ipfs/${added.path}`; // `${subdomain}/ipfs/${added.path}``https://ipfs.infura.io/ipfs/${added.path}`;
+=======
+    console.log("added ...", added);
+    const ipfs = `${subdomain}/ipfs/${added.path}`; //`https://ipfs.infura.io/ipfs/${added.path}`;
+>>>>>>> 4e231b84afb0263b872a9674c0e9de1dc2ee20aa
 
     const candidate = await contract.setCandidate(
       address,
